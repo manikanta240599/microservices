@@ -1,4 +1,4 @@
-package com.microservices.accounts;
+package com.example.loans;
 
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -14,17 +14,18 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @OpenAPIDefinition(
     info =
         @Info(
-            title = "Accounts microservice REST API Documentation",
-            description = "Accounts microservice REST API Documentation",
+            title = "Loans microservice REST API Documentation",
+            description = "Loans microservice REST API Documentation",
             version = "v1",
             contact = @Contact(name = "Mani", email = "mani@gmail.com", url = "https://localhost"),
             license = @License(name = "Apache 2.0", url = "https://localhost")),
     externalDocs =
         @ExternalDocumentation(
-            description = "Accounts microservice REST API Documentation",
+            description = "Cards microservice REST API Documentation",
             url = "http://localhost:8080/swagger-ui/index.html#/"))
-public class AccountsApplication {
+public class LoansApplication {
+
   public static void main(String[] args) {
-    SpringApplication.run(AccountsApplication.class, args);
+    SpringApplication.run(LoansApplication.class, args);
   }
 }
