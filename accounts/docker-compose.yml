@@ -1,0 +1,38 @@
+services:
+  accounts:
+    image: "manikanta2405/accounts-ms"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank
+  loans:
+    image: "manikanta2405/loans-ms"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank
+  cards:
+    image: "manikanta2405/cards-ms"
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bank
+networks:
+  bank:
+    driver: bridge
+
